@@ -25,12 +25,14 @@ async function searchMovie() {
     const movieCardDiv = document.createElement("div");
     const movieTitle = document.createElement("h2");
     const movieCardPic = document.createElement("img");
+    const movieYear = document.createElement("h1")
     movieCardDiv.innerText = "movie";
     movieTitle.innerText = json.Search[i].Title;
     movieCardPic.src = json.Search[i].Poster;
+    //movieYear.innerText = movie.Year;
 
-    movieCardDiv.append(movieCardPic);
+    movieCardDiv.append(movieCardPic, movieTitle, movieYear);
     movieMain.append(movieCardDiv);
-    //movieTitle.append()
+    
   }
 }
